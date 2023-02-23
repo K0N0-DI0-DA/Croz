@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.croz.mainui.MainUIFragment" >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/center_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:transformPivotX="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/pager_navigator"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/color_white"
+            app:layout_constraintBottom_toTopOf="@+id/bottom_navigator"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+        </androidx.viewpager2.widget.ViewPager2>
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_dark_pink"
+            app:itemIconTint="@color/color_white"
+            app:itemTextColor="@color/text_white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:menu="@menu/mainui_bottom_navigator_menu"
+            tools:itemIconTint="@color/color_white"
+            tools:ignore="VisualLintBottomNav" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/side_navigator_blocker"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:alpha="0"
+        android:background="#80000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/side_navigator"
+        android:layout_width="225dp"
+        android:layout_height="match_parent"
+        android:background="@color/mainui_sidebar_color"
+        android:translationX="-225dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/side_navigator_user_icon"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="48dp"
+            android:background="@drawable/rounded_corner_96x96x96x96_dark_pink"
+            android:src="@drawable/icon_bugreport"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/icon_bugreport"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/side_navigator_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/side_navigator_test_username"
+            android:textColor="@color/text_dark_pink"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/side_navigator_user_icon"
+            app:layout_constraintTop_toBottomOf="@+id/side_navigator_user_icon" />
+
+        <TextView
+            android:id="@+id/side_navigator_user_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/side_navigator_test_user_email"
+            android:textColor="@color/text_dark_pink"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/side_navigator_user_icon"
+            app:layout_constraintTop_toBottomOf="@+id/side_navigator_user_name" />
+
+        <Space
+            android:id="@+id/side_navigator_space"
+            android:layout_width="wrap_content"
+            android:layout_height="96dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/side_navigator_user_email" />
+
+        <ImageView
+            android:id="@+id/side_navigator_account_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="16dp"
+            android:scaleType="fitCenter"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/side_navigator_space"
+            app:srcCompat="@drawable/icon_account"
+            app:tint="@color/text_dark_pink"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/side_navigator_payment_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="16dp"
+            android:scaleType="fitCenter"
+            app:layout_constraintStart_toStartOf="@+id/side_navigator_account_icon"
+            app:layout_constraintTop_toBottomOf="@+id/side_navigator_account_icon"
+            app:srcCompat="@drawable/icon_payment"
+            app:tint="@color/text_dark_pink"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/side_navigator_setting_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="16dp"
+            android:scaleType="fitCenter"
+            app:layout_constraintStart_toStartOf="@+id/side_navigator_payment_icon"
+            app:layout_constraintTop_toBottomOf="@+id/side_navigator_payment_icon"
+            app:srcCompat="@drawable/icon_settings"
+            app:tint="@color/text_dark_pink"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/side_navigator_help_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="16dp"
+            android:scaleType="fitCenter"
+            app:layout_constraintStart_toStartOf="@+id/side_navigator_setting_icon"
+            app:layout_constraintTop_toBottomOf="@+id/side_navigator_setting_icon"
+            app:srcCompat="@drawable/icon_help"
+            app:tint="@color/text_dark_pink"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/side_navigator_account_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/side_navigator_account"
+            android:textColor="@color/text_dark_pink"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/side_navigator_account_icon"
+            app:layout_constraintStart_toEndOf="@+id/side_navigator_account_icon"
+            app:layout_constraintTop_toTopOf="@+id/side_navigator_account_icon" />
+
+        <TextView
+            android:id="@+id/side_navigator_payment_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/side_navigator_payment_method"
+            android:textColor="@color/text_dark_pink"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/side_navigator_payment_icon"
+            app:layout_constraintStart_toEndOf="@+id/side_navigator_payment_icon"
+            app:layout_constraintTop_toTopOf="@+id/side_navigator_payment_icon" />
+
+        <TextView
+            android:id="@+id/side_navigator_setting_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/side_navigator_setting"
+            android:textColor="@color/text_dark_pink"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/side_navigator_setting_icon"
+            app:layout_constraintStart_toEndOf="@+id/side_navigator_setting_icon"
+            app:layout_constraintTop_toTopOf="@+id/side_navigator_setting_icon" />
+
+        <TextView
+            android:id="@+id/side_navigator_help_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/side_navigator_help"
+            android:textColor="@color/text_dark_pink"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/side_navigator_help_icon"
+            app:layout_constraintStart_toEndOf="@+id/side_navigator_help_icon"
+            app:layout_constraintTop_toTopOf="@+id/side_navigator_help_icon" />
+
+        <Button
+            android:id="@+id/side_navigator_button_logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/rounded_corner_48x48x48x48_brown"
+            android:text="@string/side_navigator_logout"
+            android:textSize="14sp"
+            app:backgroundTint="@color/color_brown"
+            app:icon="@drawable/icon_logout"
+            app:iconGravity="textStart"
+            app:iconSize="@dimen/icon_size_2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

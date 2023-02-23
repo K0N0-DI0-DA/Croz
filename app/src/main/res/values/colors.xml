@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background_color">#FFFFFF</color>
+    <color name="mainui_sidebar_color">#F7F7F7</color>
+
+    <color name="color_white">#FFFFFF</color>
+    <color name="color_black">#000000</color>
+    <color name="color_brown">#574143</color>
+    <color name="color_white_pink">#FFECF0</color>
+    <color name="color_dark_pink">#FF647F</color>
+    <color name="text_dark_pink">#D62A66</color>
+    <color name="text_white">#FFFFFF</color>
+    <color name="text_brown">#574143</color>
+    <color name="text_black">#000000</color>
+</resources>

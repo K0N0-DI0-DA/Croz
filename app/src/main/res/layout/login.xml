@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    tools:context="com.croz.login.LoginFragment" >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/free_constraint_layout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/top_container">
+
+        <ImageView
+            android:id="@+id/free_image_1"
+            android:layout_width="350dp"
+            android:layout_height="329dp"
+            android:layout_marginTop="-165dp"
+            android:layout_marginEnd="-123dp"
+            android:rotation="44"
+            android:rotationY="0"
+            android:src="@drawable/login_free_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="#FFC83D"
+            tools:ignore="contentDescription" />
+
+        <ImageView
+            android:id="@+id/free_image_2"
+            android:layout_width="350dp"
+            android:layout_height="431dp"
+            android:layout_marginStart="-100dp"
+            android:layout_marginBottom="-170dp"
+            android:rotation="-123"
+            android:rotationY="0"
+            android:src="@drawable/login_free_image"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:tint="#FFC83D"
+            tools:ignore="contentDescription" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/top_container"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:background="@drawable/rounded_corner_0x48x48x0_grad_dark_pink"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="104dp"
+            android:layout_height="104dp"
+            android:layout_marginStart="128dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="128dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/test_logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/background_color"
+            tools:ignore="contentDescription" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="0.01dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/logo">
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/clickable_switch_login"
+            android:layout_width="136dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/clickable_switch_login"
+            android:textColor="@color/text_white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/constraintLayout"
+            app:layout_constraintEnd_toStartOf="@+id/constraintLayout" />
+
+        <TextView
+            android:id="@+id/clickable_switch_register"
+            android:layout_width="136dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/clickable_register"
+            android:textColor="@color/text_white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/constraintLayout"
+            app:layout_constraintStart_toEndOf="@+id/constraintLayout" />
+
+        <ImageView
+            android:id="@+id/login_switch_line"
+            android:layout_width="44dp"
+            android:layout_height="18dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:scaleX="4"
+            android:src="@drawable/icon_line"
+            android:translationX="-64dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+            app:tint="@color/color_brown"
+            tools:adjustViewBounds="true"
+            tools:ignore="ContentDescription" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/middle_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/top_container">
+
+        <EditText
+            android:id="@+id/field_username"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="56dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="56dp"
+            android:backgroundTint="@color/text_dark_pink"
+            android:ems="10"
+            android:hint="@string/login_field_username"
+            android:inputType="text"
+            android:textColor="@color/text_dark_pink"
+            android:textColorHint="@color/text_dark_pink"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="autoFill" />
+
+        <EditText
+            android:id="@+id/field_password"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/text_dark_pink"
+            android:ems="10"
+            android:hint="@string/login_field_password"
+            android:inputType="text|textPassword|textWebPassword"
+            android:textColor="@color/text_dark_pink"
+            android:textColorHint="@color/text_dark_pink"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/field_username"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/field_username"
+            app:layout_constraintTop_toBottomOf="@+id/field_username"
+            tools:ignore="autoFill" />
+
+        <EditText
+            android:id="@+id/field_repeat_password"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/text_dark_pink"
+            android:ems="10"
+            android:hint="@string/login_field_repeat_password"
+            android:inputType="text|textPassword|textWebPassword"
+            android:scaleX="0"
+            android:textColor="@color/text_dark_pink"
+            android:textColorHint="@color/text_dark_pink"
+            android:textSize="16sp"
+            android:transformPivotX="0dp"
+            app:layout_constraintEnd_toEndOf="@+id/field_password"
+            app:layout_constraintStart_toStartOf="@+id/field_password"
+            app:layout_constraintTop_toBottomOf="@+id/field_password"
+            tools:ignore="autoFill,TouchTargetSizeCheck" />
+
+        <TextView
+            android:id="@+id/clickable_forgot_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="4dp"
+            android:text="@string/clickable_forgot_password"
+            android:textColor="@color/text_dark_pink"
+            app:layout_constraintEnd_toEndOf="@+id/field_password"
+            app:layout_constraintTop_toBottomOf="@+id/field_password" />
+
+        <Button
+            android:id="@+id/button_login"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="128dp"
+            android:background="@drawable/rounded_corner_48x48x48x48_brown"
+            android:backgroundTint="@color/color_brown"
+            android:gravity="center_horizontal"
+            android:text="@string/clickable_login"
+            android:textColor="@color/text_white"
+            android:textSize="20sp"
+            app:backgroundTint="@color/color_brown"
+            app:layout_constraintEnd_toEndOf="@+id/field_password"
+            app:layout_constraintStart_toStartOf="@+id/field_password"
+            app:layout_constraintTop_toBottomOf="@+id/clickable_forgot_password"
+            tools:ignore="DuplicateSpeakableTextCheck" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottom_container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/middle_container"
+        app:layout_constraintVertical_bias="0.569">
+
+        <Button
+            android:id="@+id/button_facebook_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/rounded_corner_48x48x48x48_white_pink"
+            android:backgroundTint="@color/color_white_pink"
+            android:text="@string/button_facebook_login_choice"
+            android:textColor="@color/text_dark_pink"
+            android:textSize="12sp"
+            app:backgroundTint="@color/color_white_pink"
+            app:icon="@drawable/icon_facebook"
+            app:iconGravity="textStart"
+            app:iconSize="@dimen/icon_size_2"
+            app:iconTint="@color/color_dark_pink"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:strokeColor="@color/color_black"
+            app:strokeWidth="10dp"
+            tools:ignore="DuplicateSpeakableTextCheck" />
+
+        <Button
+            android:id="@+id/button_google_login"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/rounded_corner_48x48x48x48_white_pink"
+            android:backgroundTint="@color/color_white_pink"
+            android:text="@string/button_google_login_choice"
+            android:textColor="@color/text_dark_pink"
+            android:textSize="12sp"
+            app:backgroundTint="@color/color_white_pink"
+            app:icon="@drawable/icon_dot"
+            app:iconGravity="textStart"
+            app:iconSize="@dimen/icon_size_2"
+            app:iconTint="@color/color_dark_pink"
+            app:layout_constraintEnd_toEndOf="@+id/button_facebook_login"
+            app:layout_constraintStart_toStartOf="@+id/button_facebook_login"
+            app:layout_constraintTop_toBottomOf="@+id/button_facebook_login"
+            app:strokeWidth="10dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

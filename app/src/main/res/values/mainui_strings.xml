@@ -1,0 +1,15 @@
+<resources>
+    <string name="bottom_navigator_home">Trang chủ</string>
+    <string name="bottom_navigator_item">Danh mục</string>
+    <string name="bottom_navigator_bill">Hóa đơn</string>
+    <string name="bottom_navigator_favourite">Ưa thích</string>
+    <string name="bottom_navigator_contact">Liên hệ</string>
+
+    <string name="side_navigator_test_username">Lê Trường Giang</string>
+    <string name="side_navigator_test_user_email">| gianghn21@gmail.com</string>
+    <string name="side_navigator_account">Tài khoản</string>
+    <string name="side_navigator_payment_method">Thanh toán</string>
+    <string name="side_navigator_setting">Cài đặt</string>
+    <string name="side_navigator_help">Trợ giúp</string>
+    <string name="side_navigator_logout">Đăng xuất</string>
+</resources>

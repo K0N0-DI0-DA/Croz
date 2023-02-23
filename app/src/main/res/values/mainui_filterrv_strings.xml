@@ -1,0 +1,7 @@
+<resources>
+    <string name="filterrv_title_1">Bánh</string>
+    <string name="filterrv_title_2">Cà phê</string>
+    <string name="filterrv_title_3">Hamburger</string>
+    <string name="filterrv_title_4">Trái cây</string>
+    <string name="filterrv_title_5">Bánh 2</string>
+</resources>

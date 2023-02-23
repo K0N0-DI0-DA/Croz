@@ -1,0 +1,14 @@
+<resources>
+    <string name="application_name_1">Sweet</string>
+    <string name="application_name_2">Bake shop</string>
+    <string name="clickable_switch_login">Đăng nhập</string>
+    <string name="clickable_switch_register">Đăng kí</string>
+    <string name="login_field_username">Tên đăng nhập</string>
+    <string name="login_field_password">Mật khẩu</string>
+    <string name="login_field_repeat_password">Nhập lại mật khẩu</string>
+    <string name="clickable_login">Đăng nhập</string>
+    <string name="clickable_register">Đăng kí</string>
+    <string name="clickable_forgot_password">Quên mật khẩu ?</string>
+    <string name="button_facebook_login_choice">Đăng nhập với Facebook</string>
+    <string name="button_google_login_choice">Đăng nhập với Google</string>
+</resources>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.croz.login.LoginFragment"
+        android:label="login"
+        tools:layout="@layout/login" >
+        <action
+            android:id="@+id/action_loginFragment_to_splash2Fragment"
+            app:destination="@id/splash2Fragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+        <action
+            android:id="@+id/action_loginFragment_to_mainUIFragment"
+            app:destination="@id/mainUIFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.croz.splash.Splash1Fragment"
+        android:label="splash_1"
+        tools:layout="@layout/splash_1" >
+        <action
+            android:id="@+id/action_splashFragment2_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainUIFragment"
+        android:name="com.croz.mainui.MainUIFragment"
+        android:label="mainui"
+        tools:layout="@layout/mainui" >
+        <action
+            android:id="@+id/action_mainUIFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@anim/nav_default_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/splash2Fragment"
+        android:name="com.croz.splash.Splash2Fragment"
+        android:label="splash_2"
+        tools:layout="@layout/splash_2" >
+        <action
+            android:id="@+id/action_splash2Fragment_to_mainUIFragment"
+            app:destination="@id/mainUIFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+    </fragment>
+</navigation>

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Croz</string>
+    <string name="null_string">Null</string>
+    <string name="test_string">Test String</string>
+</resources>

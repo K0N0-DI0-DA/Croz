@@ -1,0 +1,11 @@
+<resources>
+
+    <style name="circle">
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="quad_circle">
+        <item name="cornerSize">15%</item>
+    </style>
+
+</resources>
